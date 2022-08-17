@@ -1,0 +1,92 @@
+@import './_vars';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  &::after,
+  &:before {
+    box-sizing: inherit;
+  }
+}
+
+html {
+  font-size: 12pt;
+  @media screen and (max-width: 736px) {
+    & {
+      font-size: 11pt;
+    }
+  }
+}
+body {
+  color: $text-color;
+  font-family: $font;
+  padding: 1rem 4rem;
+  min-width: 360px;
+  @media screen and (max-width: 736px) {
+    & {
+      padding: 1rem 2rem;
+    }
+  }
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  line-height: 1.5rem;
+}
+
+button,
+input[type='submit'],
+.btn {
+  font-family: $font;
+  display: inline-block;
+  cursor: pointer;
+  appearance: none;
+  border: none;
+  text-align: center;
+}
+label,
+input,
+textarea,
+select {
+  display: block;
+  width: 100%;
+  appearance: none;
+  border: none;
+  outline: none;
+  height: 2rem;
+}
+
+form {
+  label {
+    margin-bottom: 0.25rem;
+    height: 1rem;
+    line-height: 1rem;
+    font-size: 0.6rem;
+    position: relative;
+  }
+  input,
+  textarea {
+    color: $text-color;
+  }
+  input {
+    height: 2.25rem;
+    line-height: 2.25rem;
+    border-radius: 0.35rem;
+    padding: 0.25rem 1rem;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 0.75rem;
+  }
+  textarea {
+    font-family: $font;
+    resize: none;
+    height: 6.5rem;
+    border-radius: 0.35rem;
+    padding: 0.6rem 1rem;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 0.75rem;
+  }
+}
